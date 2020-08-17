@@ -30,12 +30,12 @@ The data considered in the incident and mobilisation records goes from 1 January
 - Initial agent locations (station locations or random).
 
 The coalition values are the only information not definable from the data. We
-generate them using the functions described in Section 5.1 of the following
-[paper](https://www.ijcai.org/Proceedings/2020/0057.pdf):
+generate them using the functions described in Section 4 of the following
+[paper](https://eprints.soton.ac.uk/337164/1/Paper_524.pdf):
 
-> Wu, F., & Ramchurn, S. D. (2020). Monte-Carlo Tree Search for Scalable
-> Coalition Formation. In Proceedings of the 29th International Joint Conference
-> on Artificial Intelligence (IJCAI).
+> Rahwan, Talal, Michalak, Tomasz and Jennings, Nicholas R. (2012). A hybrid
+> algorithm for coalition structure generation. 26th Conference on Artificial
+> Intelligence (AAAI-12), Canada 22-26 Jul 2012, pp. 1443-1449.
 
 # Licenses
 
