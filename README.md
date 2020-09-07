@@ -1,5 +1,7 @@
 # London Fire Brigade (LFB) benchmark datasets
 
+[![DOI](https://zenodo.org/badge/293638334.svg)](https://zenodo.org/badge/latestdoi/293638334)
+
 [DC-MATS](https://gitlab.com/lcpz/dcmats) instances generated from the following datasets:
 
 - [LFB Incident Records](https://data.london.gov.uk/dataset/london-fire-brigade-incident-records).
