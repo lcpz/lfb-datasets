@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 # joins two dictionaries on the given column
+# be sure that the data sets are well-formed
 # usage: ./join.py [dictionaries] column_str
 
 import csv, sys
