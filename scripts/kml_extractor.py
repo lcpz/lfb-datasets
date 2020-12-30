@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # extracts a Google Maps layer file (KML)
-# dependency: pykml >= 0.2.0 (available in pip)
+# dependency: pykml >= 0.2.0 (available from pip)
 
 import sys
 from pykml import parser
