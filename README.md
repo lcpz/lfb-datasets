@@ -10,7 +10,7 @@
 The data considered is dated from 1 January 2009 to 31 December 2020. The fleet
 list is updated as of October 2019.
 
-The locations of the stations have been retrieved from [Google
+The locations of the stations have been retrieved in December 2020 from [Google
 Maps](https://www.google.com/maps/d/viewer?mid=1rSai4zdG8uSujX8QxY1i0cwgNAU&msa=0&ll=51.576189821246516%2C-0.5874470076488247&spn=0.064273%2C0.169086&iwloc=lyrftr%3Almq%3A1004%3Afire%20station%2C9131785149235576475%2C51.606291%2C0.10437&z=10)
 and elaborated with [`pyKML`](https://pypi.org/project/pykml).
 

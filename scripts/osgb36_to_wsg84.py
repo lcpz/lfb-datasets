@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Converts a dataset from Easting-Northing to Latitude-Longitude format
+# converts a dataset from Easting-Northing to Latitude-Longitude format
 # dependency: pyproj >= 3.0.0 (available from pip)
 
 import csv, sys
