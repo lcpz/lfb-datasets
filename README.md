@@ -18,18 +18,17 @@ and elaborated with [`pyKML`](https://pypi.org/project/pykml).
 
 1. Use [`python-xlsx2csv`](https://pypi.org/project/xls2csv/) to convert to
    `.csv` format.
-2. Exclude rows containing `False Alarm`, `NULL`, `Ham` or `HAM`.
-3. Select the following columns from the Incident Records:
+2. Select the following columns from the Incident Records:
    ```shell
    IncidentNumber,DateOfCall,TimeOfCall,IncidentGroup,Easting_m,Northing_m
    ```
-   If available, select `Latitude,Longitude` instead of `Easting_m,Northing_m`
-4. Select the following columns from the Mobilisation Records:
+3. Select the following columns from the Mobilisation Records:
    ```shell
-   TimeMobilised,TimeArrived,AttendanceTimeSeconds,DeployedFromStation_Code
+   IncidentNumber,TimeMobilised,TimeArrived,AttendanceTimeSeconds,DeployedFromStation_Code
    ```
-5. Join the datasets thus obtained with `scripts/join_csv.py`.
-6. If necessary, convert to latitude and longitude coordinates with
+4. Exclude rows containing `False Alarm`, `NULL`, Ham` or `HAM`.
+5. Join the datasets thus obtained on `IncidentNumber` with `scripts/join_csv.py`.
+6. Convert to latitude and longitude coordinates with
    `scripts/osgb36_to_wsg84.py`.
 
 ## How to generate problems
