@@ -20,6 +20,6 @@ if len(sys.argv) != 0 and '.csv' in sys.argv[1]:
                 gps = t.transform(line[4], line[5])
                 line[4] = gps[0]
                 line[5] = gps[1]
-                if 'E-' or 'e-' in line[2]:
+                if ':' not in line[2]:
                     line[2] = format(float(line[2]), '.2f').replace('0.', '00:')
             print(*line, sep=',')
