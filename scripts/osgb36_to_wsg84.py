@@ -10,7 +10,7 @@ t = Transformer.from_crs('epsg:27700', 'epsg:4326')
 
 if len(sys.argv) != 0 and '.csv' in sys.argv[1]:
     headers = False
-    with open(sys.argv[1], 'r') as f:
+    with open(sys.argv[1]) as f:
         for line in csv.reader(f):
             if not headers:
                 line[4] = 'Latitude'

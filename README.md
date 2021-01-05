@@ -27,9 +27,10 @@ and elaborated with [`pyKML`](https://pypi.org/project/pykml).
    IncidentNumber,TimeMobilised,TimeArrived,AttendanceTimeSeconds,DeployedFromStation_Code
    ```
 4. Exclude rows containing `False Alarm`, `NULL`, Ham` or `HAM`.
-5. Join the datasets thus obtained on `IncidentNumber` with `scripts/join_csv.py`.
+5. Intersect the datasets thus obtained on `IncidentNumber` with `scripts/intersect.py`.
 6. Convert to latitude and longitude coordinates with
    `scripts/osgb36_to_wsg84.py`.
+7. Clean inconsistencies with `scripts/cleaner.py`.
 
 ## How to generate problems
 
