@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# intersect 2 .CSV datasets on the first column
+# intersect multiple .CSV datasets on the first column of the first one
 # usage: ./join.py [list of data sets]
 
 import csv, sys

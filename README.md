@@ -7,7 +7,7 @@
 - [LFB Fleet List](https://data.london.gov.uk/dataset/london-fire-brigade---fleet-list)
 - [LFB Letter FOIA4310.1](https://www.london-fire.gov.uk/media/3916/foia43101.pdf)
 
-The data considered is dated from 1 January 2009 to 31 December 2020. The fleet
+The data considered is dated from 1 January 2009 to 30 November 2020. The fleet
 list is updated as of October 2019.
 
 The locations of the stations have been retrieved in December 2020 from [Google
@@ -20,15 +20,15 @@ and elaborated with [`pyKML`](https://pypi.org/project/pykml).
    `.csv` format.
 2. Select the following columns from the Incident Records:
    ```shell
-   IncidentNumber,DateOfCall,TimeOfCall,IncidentGroup,Easting_m,Northing_m
+   IncidentNumber,DateOfCall,TimeOfCall,IncidentGroup,Easting_rounded,Northing_rounded
    ```
 3. Select the following columns from the Mobilisation Records:
    ```shell
    IncidentNumber,TimeMobilised,TimeArrived,AttendanceTimeSeconds,DeployedFromStation_Code
    ```
 4. Exclude rows containing `False Alarm`, `NULL`, Ham` or `HAM`.
-5. Intersect the datasets thus obtained on `IncidentNumber` with `scripts/intersect.py`.
-6. Convert to latitude and longitude coordinates with
+5. Intersect the datasets thus obtained on with `scripts/intersect.py`.
+6. Convert to latitude-longitude coordinates with
    `scripts/osgb36_to_wsg84.py`.
 7. Clean inconsistencies with `scripts/cleaner.py`.
 

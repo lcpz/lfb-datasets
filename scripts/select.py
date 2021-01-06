@@ -5,11 +5,9 @@
 import csv, sys
 
 if len(sys.argv) >= 3 and '.csv' in sys.argv[1]:
-    headers = False
     with open(sys.argv[1]) as f:
         for line in csv.reader(f):
-            if not headers:
-                headers = True
+            if line[0] == 'IncidentNumber':
                 print(*line, sep=',')
             else:
                 hour = int(line[2].split(':')[0])
