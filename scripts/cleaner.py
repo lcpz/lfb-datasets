@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# remove entries not containing the given station code or having empty columns
+# remove rows not containing the given station codes or having invalid columns
 
 import csv, sys
 
@@ -13,5 +13,5 @@ if len(sys.argv) == 3 and '.csv' in sys.argv[1]:
     with open(sys.argv[1]) as f:
         for line in csv.reader(f):
             if len(line) == 10 and (line[0] == 'IncidentNumber' or (line[9] not
-                in missing_stations and '' not in line)):
+                in missing_stations and '' not in line and ',0,' not in line)):
                 print(*line, sep=',')
