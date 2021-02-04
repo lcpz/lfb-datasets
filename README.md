@@ -1,4 +1,4 @@
-# MARSC-LFB benchmark
+# MARSC-LFB data sets
 
 [MARSC](https://gitlab.com/lcpz/MARSC) data sets generated with the following resources:
 
