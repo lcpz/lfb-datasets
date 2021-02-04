@@ -1,13 +1,13 @@
 # London Fire Brigade (LFB) benchmark datasets
 
-[CMARS](https://gitlab.com/lcpz/CMARS) datasets generated with the following resources:
+[MARSC](https://gitlab.com/lcpz/MARSC) data sets generated with the following resources:
 
 - [LFB Incident Records](https://data.london.gov.uk/dataset/london-fire-brigade-incident-records)
 - [LFB Mobilisation Records](https://data.london.gov.uk/dataset/london-fire-brigade-mobilisation-records)
 - [LFB Fleet List](https://data.london.gov.uk/dataset/london-fire-brigade---fleet-list)
 - [LFB Letter FOIA4310.1](https://www.london-fire.gov.uk/media/3916/foia43101.pdf)
 
-The data considered is dated from 1 January 2009 to 30 November 2020. The fleet
+The data considered is dated from 1 January 2009 to 31 December 2020. The fleet
 list is updated as of October 2019.
 
 The locations of the stations have been retrieved in December 2020 from [Google
@@ -24,13 +24,14 @@ and elaborated with [`pyKML`](https://pypi.org/project/pykml).
    ```
 3. Select the following columns from the Mobilisation Records:
    ```shell
-   IncidentNumber,TimeMobilised,TimeArrived,AttendanceTimeSeconds,DeployedFromStation_Code
+   IncidentNumber,(DateAnd)TimeMobilised,(DateAnd)TimeArrived,AttendanceTimeSeconds,DeployedFromStation_Code
    ```
 4. Exclude rows containing `False Alarm`, `NULL`, Ham` or `HAM`.
 5. Intersect the datasets thus obtained on with `scripts/intersect.py`.
 6. Convert to latitude-longitude coordinates with
    `scripts/osgb36_to_wsg84.py`.
 7. Clean inconsistencies with `scripts/cleaner.py`.
+8. Sort entries chronologically with `scripts/sort.py`.
 
 ## How to generate problems
 
@@ -41,13 +42,7 @@ and elaborated with [`pyKML`](https://pypi.org/project/pykml).
 - Fleet List: agent IDs and speeds.
 - Initial agent locations (station locations).
 
-The coalition values are the only information not definable from the data. We
-can generate them using the distributions described in the following
-[paper](https://eprints.soton.ac.uk/337164/1/Paper_524.pdf):
-
-> Rahwan, Talal, Michalak, Tomasz and Jennings, Nicholas R. (2012). A hybrid
-> algorithm for coalition structure generation. 26th Conference on Artificial
-> Intelligence (AAAI-12), Canada 22-26 Jul 2012, pp. 1443-1449.
+The coalition values are the only information not definable from the data.
 
 # Licenses
 

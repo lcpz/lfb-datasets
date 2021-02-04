@@ -17,7 +17,7 @@ if len(sys.argv) == 3:
             for line in csv.reader(f):
                 if is_first:
                     d[line[0]] = [line[i] for i in range(0, len(line))]
-                elif len(line) < 10 and line[0] in d.keys():
+                elif line[0] in d.keys() and len(d[line[0]]) < 10:
                     d[line[0]].append(','.join([line[i] for i in range(1, len(line))]))
                 print(line[0])
             is_first = False
