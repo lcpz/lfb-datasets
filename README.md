@@ -1,4 +1,4 @@
-# London Fire Brigade (LFB) benchmark datasets
+# MARSC-LFB benchmark
 
 [MARSC](https://gitlab.com/lcpz/MARSC) data sets generated with the following resources:
 
