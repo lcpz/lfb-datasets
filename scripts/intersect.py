@@ -26,4 +26,4 @@ if len(sys.argv) == 3:
     with open('intersection.csv', 'w') as f:
         intersect_writer = csv.writer(f)
         for row in d.values():
-            intersect_writer.writerow(row)
+            intersect_writer.writerow(row.replace('"', ''))
