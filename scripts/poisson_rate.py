@@ -27,4 +27,4 @@ if len(sys.argv) == 2 and '.csv' in sys.argv[1]:
         total_avg += avg
 
     total_avg /= len(d)
-    print('Total: {}'.format(total_avg))
+    print('Average incidents per hour and day: {}'.format(total_avg))
