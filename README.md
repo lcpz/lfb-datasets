@@ -1,20 +1,23 @@
-# MARSC-LFB data sets
+# London Fire Brigade Task Allocation Data Sets
 
-[MARSC](https://gitlab.com/lcpz/MARSC) data sets generated with the following resources:
+This repository contains real-world data sets that can be used to generate task
+allocation problems simulating firefighter mobilisation in the London
+metropolitan area.
+
+We used the following resources:
 
 - [LFB Incident Records](https://data.london.gov.uk/dataset/london-fire-brigade-incident-records)
 - [LFB Mobilisation Records](https://data.london.gov.uk/dataset/london-fire-brigade-mobilisation-records)
 - [LFB Fleet List](https://data.london.gov.uk/dataset/london-fire-brigade---fleet-list)
-- [LFB Letter FOIA4310.1](https://www.london-fire.gov.uk/media/3916/foia43101.pdf)
 
 The data considered is dated from 1 January 2009 to 31 December 2020. The fleet
-list is updated as of October 2019.
+list is that of December 2020.
 
-The locations of the stations have been retrieved in December 2020 from [Google
+Station locations have been retrieved in December 2020 from [Google
 Maps](https://www.google.com/maps/d/viewer?mid=1rSai4zdG8uSujX8QxY1i0cwgNAU&msa=0&ll=51.576189821246516%2C-0.5874470076488247&spn=0.064273%2C0.169086&iwloc=lyrftr%3Almq%3A1004%3Afire%20station%2C9131785149235576475%2C51.606291%2C0.10437&z=10)
 and elaborated with [`pyKML`](https://pypi.org/project/pykml).
 
-## How to generate node data
+## How to generate data from LFB records
 
 1. Use [`python-xlsx2csv`](https://pypi.org/project/xls2csv/) to convert to
    `.csv` format.
@@ -42,7 +45,13 @@ and elaborated with [`pyKML`](https://pypi.org/project/pykml).
 - Fleet List: agent IDs and speeds.
 - Initial agent locations (station locations).
 
-The coalition values are the only information not definable from the data.
+Coalition values (e.g., the utility of multiple pumping appliances working on
+the same fire) cannot be defined from the records.
+
+However, we can generate them with distributions typically used in Coalition
+Structure Generations. For example, we can use the distributions defined in
+Section 4 of [this
+paper](https://ojs.aaai.org/index.php/AAAI/article/view/8265).
 
 # Licenses
 

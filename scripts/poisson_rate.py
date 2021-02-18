@@ -20,7 +20,6 @@ if len(sys.argv) == 2 and '.csv' in sys.argv[1]:
     for day in d:
         avg = 0
         for hour in d[day]:
-            #print('{}, {}: {}'.format(day, hour, d[day][hour]))
             avg += d[day][hour]
         avg /= 24
         print('{}: {}'.format(day, avg))
