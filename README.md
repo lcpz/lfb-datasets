@@ -54,6 +54,16 @@ Structure Generations. For example, we can use the distributions defined in
 Section 4 of [this
 paper](https://ojs.aaai.org/index.php/AAAI/article/view/8265).
 
+# Citation
+
+If you use these datasets in your work, please use the following citation.
+
+```
+Capezzuto, Luca, Danesh Tarapore, and Sarvapali D. Ramchurn. "Multi-Agent
+Routing and Scheduling Through Coalition Formation." arXiv preprint
+arXiv:2105.00451 (2021).
+```
+
 # Licenses
 
 [OGLv2](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2)
