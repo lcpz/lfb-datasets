@@ -10,8 +10,8 @@ We used the following resources:
 - [LFB Mobilisation Records](https://data.london.gov.uk/dataset/london-fire-brigade-mobilisation-records)
 - [LFB Fleet List](https://data.london.gov.uk/dataset/london-fire-brigade---fleet-list)
 
-The data considered is dated from 1 January 2009 to 31 December 2020. The fleet
-list is that of December 2020.
+The data considered is dated from 1 January 2009 to 31 May 2021. The fleet
+list is updated to December 2020.
 
 Station locations have been retrieved in December 2020 from [Google
 Maps](https://www.google.com/maps/d/viewer?mid=1rSai4zdG8uSujX8QxY1i0cwgNAU&msa=0&ll=51.576189821246516%2C-0.5874470076488247&spn=0.064273%2C0.169086&iwloc=lyrftr%3Almq%3A1004%3Afire%20station%2C9131785149235576475%2C51.606291%2C0.10437&z=10)
@@ -29,8 +29,9 @@ and elaborated with [`pyKML`](https://pypi.org/project/pykml).
    ```shell
    IncidentNumber,(DateAnd)TimeMobilised,(DateAnd)TimeArrived,AttendanceTimeSeconds,DeployedFromStation_Code
    ```
-4. Exclude rows containing `False Alarm`, `NULL`, Ham` or `HAM`.
+4. Exclude rows containing `False Alarm`, `NULL`, `Null`, `null`, Ham` or `HAM`.
 5. Intersect the datasets thus obtained on with `scripts/intersect.py`.
+   Intersection order: Mobilisation, Incident.
 6. Convert to latitude-longitude coordinates with
    `scripts/osgb36_to_wsg84.py`.
 7. Clean inconsistencies with `scripts/cleaner.py`.
