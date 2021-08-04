@@ -1,6 +1,6 @@
-# London Fire Brigade Task Allocation Data Sets
+# London Fire Brigade Task Allocation Datasets
 
-This repository contains real-world data sets that can be used to generate task
+This repository contains real-world datasets that can be used to generate task
 allocation problems simulating firefighter mobilisation in the London
 metropolitan area.
 
