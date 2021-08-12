@@ -1,8 +1,11 @@
 # London Fire Brigade Task Allocation Datasets
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5186372.svg)](https://doi.org/10.5281/zenodo.5186372)
+
 This repository contains real-world datasets that can be used to generate task
 allocation problems simulating firefighter mobilisation in the London
 metropolitan area.
+
 
 We used the following resources:
 
