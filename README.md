@@ -32,7 +32,7 @@ and elaborated with [`pyKML`](https://pypi.org/project/pykml).
    ```shell
    IncidentNumber,(DateAnd)TimeMobilised,(DateAnd)TimeArrived,AttendanceTimeSeconds,DeployedFromStation_Code
    ```
-4. Exclude rows containing `False Alarm`, `NULL`, `Null`, `null`, Ham` or `HAM`.
+4. Exclude rows containing `False Alarm`, `NULL`, `Null`, `null`, `Ham` or `HAM`.
 5. Intersect the datasets thus obtained on with `scripts/intersect.py`.
    Intersection order: Mobilisation, Incident.
 6. Convert to latitude-longitude coordinates with
