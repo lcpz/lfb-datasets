@@ -1,15 +1,22 @@
 #!/usr/bin/env python3
 
-# extracts a Google Maps layer file (KML)
-# dependency: pykml >= 0.2.0 (available from pip)
+import os, csv, sys
+from fastkml import kml
 
-import sys
-from pykml import parser
+if len(sys.argv) == 2:
+    with open(sys.argv[1]) as kml_file:
+        doc = kml_file.read().encode('utf-8')
 
-kml_file = sys.argv[1] # the input KML file
+    k = kml.KML()
+    k.from_string(doc)
 
-with open(kml_file) as f:
-  folder = parser.parse(f).getroot().Document.Folder
+    stations_file = open(kml_filename.split('.')[0], 'w', newline='')
+    csv_writer = csv.writer(stations_file, lineterminator=os.linesep)
 
-for pm in folder.Placemark:
-    print(f'{str(pm.name).strip()},{str(pm.Point.coordinates).strip()}')
+    for feat in k.features():
+        for folder in feat.features():
+            for pm in folder.features():
+                # Name, Latitude (N), Longitude (W)
+                csv_writer.writerow([pm.name, pm.geometry.y, pm.geometry.x])
+
+    stations_file.close()

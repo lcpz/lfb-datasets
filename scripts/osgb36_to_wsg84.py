@@ -13,13 +13,11 @@ if len(sys.argv) != 0 and '.csv' in sys.argv[1]:
     with open(sys.argv[1]) as f:
         for line in csv.reader(f):
             if not headers:
-                line[4] = 'Latitude'
-                line[5] = 'Longitude'
+                line[-2] = 'Latitude'
+                line[-1] = 'Longitude'
                 headers = True
             else:
-                gps = t.transform(line[4], line[5])
-                line[4] = gps[0]
-                line[5] = gps[1]
-                if ':' not in line[2]:
-                    line[2] = format(float(line[2]), '.2f').replace('0.', '00:')
+                gps = t.transform(line[-2], line[-1])
+                line[-2] = gps[0]
+                line[-1] = gps[1]
             print(*line, sep=',')
